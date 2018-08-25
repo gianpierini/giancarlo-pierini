@@ -1,0 +1,214 @@
+@import '../../styles/mixins/media-queries.scss';
+
+.personal-info--container {
+  width: 90%;
+  margin: 75px auto;
+  
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  .profile-picture {
+    text-align: center;
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  }
+
+  .name {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0 5px 0;
+    line-height: 20px;
+    padding-right: 10px;
+    color: #0d47a1;
+    text-shadow: 0 1px 2px #555;
+
+    @include tablet {
+      margin: 10px;
+    }
+
+    @include desktop {
+      font-size: 3em;
+    }
+
+    @include hi-res {
+      font-size: 3em;
+    }
+  }
+
+  .profession {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    font-weight: bold;
+    color: #1565c0;
+    font-size: 1em;
+
+    @include desktop {
+      font-size: 1.5em;
+      margin: 10px;
+    }
+
+    @include hi-res {
+      font-size: 1.5em;
+      margin: 10px;
+    }
+  }
+
+  .about-me {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 50px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    .persona-details {
+      .detail {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+        .detail-title {
+          margin: 0;
+          color: #0d47a1;
+          text-align: center;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        .detail-description {
+          padding-left: 15px;
+          color: #666;
+          text-align: center;
+          font-weight: 600;
+          margin: 6px 0;
+        }
+
+        @include desktop {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+        @include hi-res {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: center;
+        }
+      }
+
+      @include desktop {
+        width: 48%;
+        text-align: left;
+        order: 2;
+        border-left: 2px solid #0d47a1;
+        padding-left: 15px;
+        margin-top: 15px;
+      }
+
+      @include hi-res {
+        width: 48%;
+        text-align: left;
+        order: 2;
+        border-left: 2px solid #0d47a1;
+        padding-left: 15px;
+        margin-top: 15px;
+      }
+    }
+
+    .description {
+      padding: 10px;
+      margin: 10px 0;
+      color: #555;
+      height: auto;
+      text-align: right;
+      position: relative;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+
+      p {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      @include mobile {
+        margin: 10px;
+      }
+
+      @include desktop {
+        width: 48%;
+        height: auto;
+        text-align: right;
+
+        p {
+          text-align: right;
+          max-width: 600px;
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      @include hi-res {
+        width: 48%;
+        height: auto;
+        text-align: right;
+
+        p {
+          text-align: right;
+          max-width: 600px;
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+
+    @include mobile {
+      padding: 25px 0 0 0;
+    }
+  }
+
+  .social-networks {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+
+    img {
+      cursor: pointer;
+      height: 40px;
+      margin: 8px;
+      border-radius: 50%;
+      transform: scale(1);
+      transition: all 500ms cubic-bezier(0.000, 0.590, 0.130, 1.115);
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    @include desktop {
+      margin-top: 50px;
+    }
+
+    @include hi-res {
+      margin-top: 50px;
+    }
+  }
+}
