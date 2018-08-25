@@ -5,9 +5,9 @@ import { applyMiddleware, createStore } from 'redux';
 import ReduxThunk from 'redux-thunk';
 
 import App from './components/App';
-import './index.css';
 import rootReducer from './reducers';
 import registerServiceWorker from './registerServiceWorker';
+import './styles/index.css';
 
 ReactDOM.render(
   <Provider store={createStore(rootReducer, applyMiddleware(ReduxThunk))}>

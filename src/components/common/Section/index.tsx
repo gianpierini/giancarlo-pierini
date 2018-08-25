@@ -2,10 +2,14 @@ import * as React from 'react';
 
 import './Section.css';
 
-export class Section extends React.Component {
+interface ISection {
+  className?: string;
+}
+
+export class Section extends React.Component<ISection, {}> {
   public render() {
     return (
-      <div className="section--container">
+      <div className={`section--container ${this.props.className || ''}`}>
         {this.props.children}
       </div>
     );
